@@ -5,7 +5,7 @@ class Test{
 }
 
 
-class passByValue{
+public class passByValue{
     public static void main(String[] args) {
         Test ob=new Test();
         int a=15;

@@ -21,13 +21,17 @@ public class conditionalLogicE {
     // To check the validity of Triangle
     if(a + b > c && a + c > b && b + c > a){
         System.out.println("Triangle is valid");
+        // To check the trianle type
+        if(a == b && b == c && a == c){
+            System.out.print("Equilateral Triangle");
+        }
+        else if (a == b && b == c){
+            System.out.println("Isoceles Triangle");
+        }
+        else{System.out.println("Scalene triangle");}
     }
     else{
         System.out.println("Triangle is Invalid");
     }
-
-
-
    }
-
 }

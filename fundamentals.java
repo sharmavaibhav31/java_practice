@@ -1,3 +1,4 @@
+import java.nio.channels.Pipe.SourceChannel;
 import java.util.Scanner;
 
 public class fundamentals {
@@ -17,6 +18,7 @@ public class fundamentals {
         */
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the values of a, b, f, c, d, e respectively: ");
         int a = sc.nextInt();
         int b = sc.nextInt();
         float f = sc.nextFloat();
@@ -31,7 +33,7 @@ public class fundamentals {
         System.out.println("Remainder of a and b is: "  + (a % b));
         System.out.println("ASCII value of " + d + " is: " + (int)d);
         System.out.println("Character for ASCII value " + (int)d + " is: " + d);
-        System.out.printf("Float value with 2 decimal places: %.2f\n", b);
+        System.out.printf("Float value with 2 decimal places: %.2f\n", f);
         System.out.println("String entered is: " + e);
 
 

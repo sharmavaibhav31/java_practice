@@ -73,6 +73,25 @@ public class practiceQns {
             System.out.println("array is not sorted");
         }
     }
+
+    // 12.  Compress the given string “aaabcddeeee” into a2bcd2e4 
+    public static void compressString(String str){
+        StringBuilder compressed = new StringBuilder();
+        int count = 1;
+        for (int i = 0; i < str.length(); i++) {
+            if (i + 1 < str.length() && str.charAt(i) == str.charAt(i + 1)) {
+                count++;
+            } else {
+                compressed.append(str.charAt(i));
+                if (count > 1) {
+                    compressed.append(count);
+                }
+                count = 1;
+            }
+        }
+        System.out.println("Compressed string: " + compressed.toString());
+    }
+
     
     //13. given an integer array, move all zeros to the end.
     public static void movingZeros(int[] arr){
@@ -97,17 +116,19 @@ public class practiceQns {
         System.out.println("Enter the array size: ");
         int a = sc.nextInt();
         int b = sc.nextInt();
+        String str = "aaabbccddeeeebb";
         System.out.println("Enter the array elements: ");
         int[] arr = new int[a];
         for(int i = 0; i < a; i++){
             arr[i] = sc.nextInt();
         }
-        //movingZeros(arr);
-        //arrayIsSorted(arr);
-        //reverseArray(arr);
+        movingZeros(arr);
+        arrayIsSorted(arr);
+        reverseArray(arr);
         findDuplicates(arr);
         swapNumbers(a, b);
         sc.close();
+        compressString(str);
     }
 }
 

@@ -20,7 +20,7 @@
 
 11.  Count the number of times a character repeats in a string
 
-12.  Compress the given string “aaabcddeeee” into a2bcd2e4
+12.  Compress the given string “aaabcddeeee” into a2bcd2e4 //done
 
 13.  Given an integer array move all zeros to the end //done
 

@@ -3,6 +3,35 @@ import java.util.Scanner;
 public class practiceQns {
 
 
+    //1.  Reverse an array in-place with O(1) space complexity
+    public static void reverseArray(int[] arr){
+        int start = 0;
+        int end = arr.length - 1;
+        while(start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        System.out.println("Reversed array is: ");
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    //2.  Find the duplicate elements in an array
+    public static void findDuplicates(int[] arr){
+        System.out.println("Duplicate elements are: ");
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr.length; j++){
+                if(arr[i] == arr[j]){
+                    System.out.print(arr[i] + " ");
+                }
+            }
+        }
+    }
+
     //6.  Write a function to check if the array is sorted in ascending or descending or not
     public static void arrayIsSorted(int[] arr){
         if (arr == null || arr.length <= 1) {
@@ -60,7 +89,10 @@ public class practiceQns {
             arr[i] = sc.nextInt();
         }
         //movingZeros(arr);
-        arrayIsSorted(arr);
+        //arrayIsSorted(arr);
+        //reverseArray(arr);
+        findDuplicates(arr);
+        sc.close();
     }
 }
 

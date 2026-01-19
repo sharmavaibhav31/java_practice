@@ -1,5 +1,4 @@
-1.  Reverse an array in-place with O(1)
-space complexity
+1.  Reverse an array in-place with O(1) space complexity //done
 
 2.  Find the duplicate elements in an array
 

@@ -111,24 +111,48 @@ public class practiceQns {
         }
     }
 
+    //17.  Given two arrays, arr1 and arr2, check whether arr2 is a subset of arr1 (i.e., all elements of arr2 are present in arr1)
+    public static void checkSubset(int[] arr1, int[] arr2){
+        for(int i = 0; i < arr2.length; i++){
+            boolean found = false;
+            for(int j = 0; j < arr1.length; j++){
+                if(arr1[j] == arr2[i]){
+                    found = true;
+                    continue;
+                }
+            }
+            if(!found){
+                System.out.println("arr2 is not a subset of arr1");
+                return;
+            }
+            else{ System.out.println("Array 2 is a subset of array 1");}
+        }
+        
+    }
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array size: ");
         int a = sc.nextInt();
         int b = sc.nextInt();
-        String str = "aaabbccddeeeebb";
+        //String str = "aaabbccddeeeebb";
         System.out.println("Enter the array elements: ");
-        int[] arr = new int[a];
+        int[] arr1 = new int[a];
         for(int i = 0; i < a; i++){
-            arr[i] = sc.nextInt();
+            arr1[i] = sc.nextInt();
         }
-        movingZeros(arr);
-        arrayIsSorted(arr);
-        reverseArray(arr);
-        findDuplicates(arr);
-        swapNumbers(a, b);
-        sc.close();
-        compressString(str);
+        int[] arr2 = new int[b];
+        for(int i = 0; i < b; i++){
+            arr2[i] = sc.nextInt();
+        }
+        // movingZeros(arr);
+        // arrayIsSorted(arr);
+        // reverseArray(arr);
+        // findDuplicates(arr);
+        // swapNumbers(a, b);
+        // sc.close();
+        // compressString(str);
+        checkSubset(arr1, arr2);
     }
 }
 

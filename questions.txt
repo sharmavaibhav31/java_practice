@@ -36,9 +36,7 @@ brackets must be closed by the same type of brackets in the correct order.
 array such that all even numbers appear at the beginning and all odd numbers
 appear at the end. The order of numbers does not matter.
 
-17.  Given two arrays, arr1 and arr2,
-check whether arr2 is a subset of arr1
-(i.e., all elements of arr2 are present in arr1)
+17.  Given two arrays, arr1 and arr2, check whether arr2 is a subset of arr1 (i.e., all elements of arr2 are present in arr1)
 
 18.  Given an array nums, return an array where each element is
 the product of all elements except itself. Do it without using division and in

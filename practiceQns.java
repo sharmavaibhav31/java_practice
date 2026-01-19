@@ -19,7 +19,6 @@ public class practiceQns {
             System.out.print(arr[i] + " ");
         }
     }
-
     //2.  Find the duplicate elements in an array
     public static void findDuplicates(int[] arr){
         System.out.println("Duplicate elements are: ");
@@ -30,6 +29,20 @@ public class practiceQns {
                 }
             }
         }
+    }
+
+    //3.  Find the second largest number of a given unsorted array with only one pass
+    public static void secondLargest(int[] arr){
+
+
+    }
+    //10.  Swap two numbers without using a third variable
+    public static void swapNumbers(int a, int b){
+        System.out.println("Before swapping: a = " + a + ", b = " + b);
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("After swapping: a = " + a + ", b = " + b);
     }
 
     //6.  Write a function to check if the array is sorted in ascending or descending or not
@@ -83,6 +96,7 @@ public class practiceQns {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array size: ");
         int a = sc.nextInt();
+        int b = sc.nextInt();
         System.out.println("Enter the array elements: ");
         int[] arr = new int[a];
         for(int i = 0; i < a; i++){
@@ -92,6 +106,7 @@ public class practiceQns {
         //arrayIsSorted(arr);
         //reverseArray(arr);
         findDuplicates(arr);
+        swapNumbers(a, b);
         sc.close();
     }
 }

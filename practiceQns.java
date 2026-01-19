@@ -76,16 +76,6 @@ public class practiceQns {
         }
     }
 
-
-    //10.  Swap two numbers without using a third variable
-    public static void swapNumbers(int a, int b){
-        System.out.println("Before swapping: a = " + a + ", b = " + b);
-        a = a + b;
-        b = a - b;
-        a = a - b;
-        System.out.println("After swapping: a = " + a + ", b = " + b);
-    }
-
     //6.  Write a function to check if the array is sorted in ascending or descending or not
     public static void arrayIsSorted(int[] arr){
         if (arr == null || arr.length <= 1) {
@@ -114,6 +104,16 @@ public class practiceQns {
             System.out.println("array is not sorted");
         }
     }
+
+    //10.  Swap two numbers without using a third variable
+    public static void swapNumbers(int a, int b){
+        System.out.println("Before swapping: a = " + a + ", b = " + b);
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("After swapping: a = " + a + ", b = " + b);
+    }
+
 
     // 12.  Compress the given string “aaabcddeeee” into a2bcd2e4 
     public static void compressString(String str){

@@ -33,9 +33,24 @@ public class practiceQns {
 
     //3.  Find the second largest number of a given unsorted array with only one pass
     public static void secondLargest(int[] arr){
-
-
     }
+
+    //5.  Reverse a string without using built-in string functions
+    public static void reverseStrings(String str){
+        char[] array = str.toCharArray();
+        int start = 0;
+        int end = array.length - 1;
+        while(start < end){
+            char temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+            start++;
+            end--;
+        }
+        String reversedStr = new String(array);
+        System.out.println("Reversed string is: " + reversedStr);
+    }
+
     //10.  Swap two numbers without using a third variable
     public static void swapNumbers(int a, int b){
         System.out.println("Before swapping: a = " + a + ", b = " + b);
@@ -135,7 +150,7 @@ public class practiceQns {
         System.out.println("Enter the array size: ");
         int a = sc.nextInt();
         int b = sc.nextInt();
-        //String str = "aaabbccddeeeebb";
+        String str = "aaabbccddeeeebb";
         System.out.println("Enter the array elements: ");
         int[] arr1 = new int[a];
         for(int i = 0; i < a; i++){
@@ -145,14 +160,15 @@ public class practiceQns {
         for(int i = 0; i < b; i++){
             arr2[i] = sc.nextInt();
         }
-        // movingZeros(arr);
-        // arrayIsSorted(arr);
-        // reverseArray(arr);
-        // findDuplicates(arr);
-        // swapNumbers(a, b);
-        // sc.close();
-        // compressString(str);
+        movingZeros(arr1);
+        arrayIsSorted(arr1);
+        reverseArray(arr1);
+        findDuplicates(arr1);
+        swapNumbers(a, b);
+        sc.close();
+        compressString(str);
         checkSubset(arr1, arr2);
+        reverseStrings(str);
     }
 }
 

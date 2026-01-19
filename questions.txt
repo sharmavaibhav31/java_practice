@@ -6,7 +6,7 @@
 
 4.  Find the missing number in an array of size N containing numbers from 1 to N+1 without using hashmaps
 
-5.  Reverse a string without using built-in string functions
+5.  Reverse a string without using built-in string functions //done
 
 6.  Write a function to check if the array is sorted //done
 

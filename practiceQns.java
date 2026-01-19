@@ -1,8 +1,38 @@
 import java.util.Scanner;
 
 public class practiceQns {
+
+
+    //6.  Write a function to check if the array is sorted in ascending or descending or not
+    public static void arrayIsSorted(int[] arr){
+        if (arr == null || arr.length <= 1) {
+        System.out.println("Array is sorted in ascending");
+        return;
+        }
+        boolean isSortedAsc = true;
+        boolean isSortedDes = true;
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                isSortedAsc = false;
+            }
+            if (arr[i] < arr[i + 1]) {
+                isSortedDes = false;
+            }
+        }
+        
+        if(isSortedAsc){        
+            System.out.println("Array is sorted in ascending");
+        }
+        else if(isSortedDes){
+            System.out.println("Array is sorted in descending");
+        }  
+        else{
+            System.out.println("array is not sorted");
+        }
+    }
     
-    //given an integer array, move all zeros to the end.
+    //13. given an integer array, move all zeros to the end.
     public static void movingZeros(int[] arr){
         int n = arr.length;
         int count = 0; 
@@ -29,10 +59,8 @@ public class practiceQns {
         for(int i = 0; i < a; i++){
             arr[i] = sc.nextInt();
         }
-        movingZeros(arr);
-
-
-
+        //movingZeros(arr);
+        arrayIsSorted(arr);
     }
 }
 

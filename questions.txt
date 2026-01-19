@@ -10,12 +10,12 @@
 
 6.  Write a function to check if the array is sorted //done
 
-7.  Find the largest repeating element of an array
+7.  Find the largest repeating element of an array //done
 
 8.  Print frequency of each element in an array
 
-9.  Find the first repeating element of an array
-
+9.  Find the first repeating element of an array //done
+ 
 10.  Swap two numbers without using a third variable //done
 
 11.  Count the number of times a character repeats in a string

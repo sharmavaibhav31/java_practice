@@ -50,6 +50,32 @@ public class practiceQns {
         String reversedStr = new String(array);
         System.out.println("Reversed string is: " + reversedStr);
     }
+    
+    //7.  Find the largest repeating element of an array 
+    public static void largestRepeatingElement(int[] arr){
+        System.out.println("Largest repeating element is: ");
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr.length ;j++){
+                if(arr[i] == arr[j]){
+                    System.out.println(arr[i] + " ");
+                }
+            }
+        }
+    }
+
+    //9.  Find the first repeating element of an array
+    public static void firstRepeatingElement(int[] arr){
+        System.out.println("First repeating element is: ");
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr.length; j++){
+                if(arr[i] == arr[j]){
+                    System.out.println(arr[i] + " ");
+                    return;
+                }
+            }
+        }
+    }
+
 
     //10.  Swap two numbers without using a third variable
     public static void swapNumbers(int a, int b){

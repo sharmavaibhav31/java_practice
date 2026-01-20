@@ -33,6 +33,18 @@ public class practiceQns {
 
     //3.  Find the second largest number of a given unsorted array with only one pass
     public static void secondLargest(int[] arr){
+        int firstLargest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > firstLargest){
+                secondLargest = firstLargest;
+                firstLargest = arr[i];
+            }
+            else if(arr[i] > secondLargest && arr[i] != firstLargest){
+                secondLargest = arr[i];
+            }
+        }
+        System.out.println("Second largest number is: " + secondLargest);
     }
 
     //5.  Reverse a string without using built-in string functions
@@ -51,30 +63,6 @@ public class practiceQns {
         System.out.println("Reversed string is: " + reversedStr);
     }
     
-    //7.  Find the largest repeating element of an array 
-    public static void largestRepeatingElement(int[] arr){
-        System.out.println("Largest repeating element is: ");
-        for(int i = 0; i < arr.length; i++){
-            for(int j = i + 1; j < arr.length ;j++){
-                if(arr[i] == arr[j]){
-                    System.out.println(arr[i] + " ");
-                }
-            }
-        }
-    }
-
-    //9.  Find the first repeating element of an array
-    public static void firstRepeatingElement(int[] arr){
-        System.out.println("First repeating element is: ");
-        for(int i = 0; i < arr.length; i++){
-            for(int j = i + 1; j < arr.length; j++){
-                if(arr[i] == arr[j]){
-                    System.out.println(arr[i] + " ");
-                    return;
-                }
-            }
-        }
-    }
 
     //6.  Write a function to check if the array is sorted in ascending or descending or not
     public static void arrayIsSorted(int[] arr){
@@ -102,6 +90,31 @@ public class practiceQns {
         }  
         else{
             System.out.println("array is not sorted");
+        }
+    }
+
+    //7.  Find the largest repeating element of an array 
+    public static void largestRepeatingElement(int[] arr){
+        System.out.println("Largest repeating element is: ");
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr.length ;j++){
+                if(arr[i] == arr[j]){
+                    System.out.println(arr[i] + " ");
+                }
+            }
+        }
+    }
+
+    //9.  Find the first repeating element of an array
+    public static void firstRepeatingElement(int[] arr){
+        System.out.println("First repeating element is: ");
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr.length; j++){
+                if(arr[i] == arr[j]){
+                    System.out.println(arr[i] + " ");
+                    return;
+                }
+            }
         }
     }
 
@@ -188,6 +201,9 @@ public class practiceQns {
         }
         movingZeros(arr1);
         arrayIsSorted(arr1);
+        secondLargest(arr1);
+        firstRepeatingElement(arr1);
+        largestRepeatingElement(arr1);
         reverseArray(arr1);
         findDuplicates(arr1);
         swapNumbers(a, b);

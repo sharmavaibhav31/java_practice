@@ -2,7 +2,7 @@
 
 2.  Find the duplicate elements in an array //done
 
-3.  Find the second largest number of a given unsorted array with only one pass
+3.  Find the second largest number of a given unsorted array with only one pass 
 
 4.  Find the missing number in an array of size N containing numbers from 1 to N+1 without using hashmaps
 

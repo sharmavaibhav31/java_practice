@@ -14,9 +14,7 @@ Find all the Armstrong numbers less than 999
 ==DONE==
 ---------------------
 
-Find the left and right diagonal sums of
-
-a n x n square matrix
+Find the left and right diagonal sums of a n x n square matrix
 
 --------------------------
 

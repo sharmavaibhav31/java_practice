@@ -48,17 +48,62 @@ public class practiceDaySecond {
         System.out.println();
     }
 
-    
+    //Find the left and right diagonal sums of a n x n square matrix
+    public static void diagonalSums(int[][] matrix){
+        int n = matrix.length;
+        int leftDiagonalSum = 0;
+        int rightDiagonalSum = 0;
+
+        for(int i = 0; i < n; i++){
+            leftDiagonalSum += matrix[i][i];
+            rightDiagonalSum += matrix[i][n - i - 1];
+        }
+
+        System.out.println("Left Diagonal Sum: " + leftDiagonalSum);
+        System.out.println("Right Diagonal Sum: " + rightDiagonalSum);
+    }
+
+    //Find the sum of all numbers below and above the left diagonal
+    public static void sumAboveBelowDiagonal(int[][] matrix){
+        int n = matrix.length;
+        int sumAbove = 0;
+        int sumBelow = 0;
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(j >= i){
+                    sumAbove += matrix[i][j];
+                } else if(j <= i){
+                    sumBelow += matrix[i][j];
+                }
+            }
+        }
+
+        System.out.println("Sum Above Left Diagonal: " + sumAbove);
+        System.out.println("Sum Below Left Diagonal: " + sumBelow);
+    }
+
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of array: ");
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        System.out.println("Enter the array elemetns: ");
+        // System.out.println("Enter the size of array: ");
+        // int n = sc.nextInt();
+        // int[] arr = new int[n];
+        // System.out.println("Enter the array elemetns: ");
+        // for(int i = 0; i < n; i++){
+        //     arr[i] = sc.nextInt();
+        // }
+        // pythogoreanTriplets(arr);
+        int n = 4;
+        int[][] matrix = new int[n][n];
         for(int i = 0; i < n; i++){
-            arr[i] = sc.nextInt();
+            for(int j = 0; j < n; j++){
+                matrix[i][j] = sc.nextInt();
+            }
         }
-        pythogoreanTriplets(arr);
+        //findArmstrongNumbers();
+        //diagonalSums(matrix);
+        sumAboveBelowDiagonal(matrix);
+        sc.close();
     }
 }

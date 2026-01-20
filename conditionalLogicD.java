@@ -5,9 +5,6 @@ Questions:
 */
 
 import java.util.Scanner;
-
-import javax.sound.sampled.SourceDataLine;
-
 public class conditionalLogicD{
     public static void main(String[] args){
         // To find the larger of two numbers without operators

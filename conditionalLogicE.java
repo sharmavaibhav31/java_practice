@@ -60,7 +60,7 @@ public class conditionalLogicE {
         }
     }
 
-
+    sc.close();
 
    }
 }

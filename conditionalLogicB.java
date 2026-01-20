@@ -67,6 +67,7 @@ public class conditionalLogicB {
             System.out.println(num + " is not divisible by 4 or is divisible by 8.");
         }
 
+        sc.close();
     }
     
 }

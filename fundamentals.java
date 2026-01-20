@@ -1,4 +1,3 @@
-import java.nio.channels.Pipe.SourceChannel;
 import java.util.Scanner;
 
 public class fundamentals {
@@ -22,7 +21,7 @@ public class fundamentals {
         int a = sc.nextInt();
         int b = sc.nextInt();
         float f = sc.nextFloat();
-        double c = sc.nextDouble();
+        // double c = sc.nextDouble();
         char d = sc.next().charAt(0);
         String e = sc.next();
 
@@ -39,7 +38,7 @@ public class fundamentals {
 
         System.out.println("hELLO WORLD");
 
-
+        sc.close();
     }
     
 }

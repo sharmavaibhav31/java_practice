@@ -29,10 +29,12 @@ Find the longest substring without repeating characters inside a given string.
      Input: dvdf            Output: vdf
 
      Input: abbas         Output: bas
-
+==Done==
 ----------------------
 
-A fintech company system receives time series data from two different market data feeds that need to be merged, analyzed, and processed efficiently. Memory usage and processing speed are critical constraints due to the large volume of real-time data.  Each data feed is a sorted list of tuples with format (timestamp, value).  Timestamp is an integer representing Unix timestamp (time elapsed since origin of time)
+A fintech company system receives time series data from two different market data feeds that need to be merged, analyzed, and processed efficiently. 
+Memory usage and processing speed are critical constraints due to the large volume of real-time data.  
+Each data feed is a sorted list of tuples with format (timestamp, value).  Timestamp is an integer representing Unix timestamp (time elapsed since origin of time)
 
 Write functions to
 

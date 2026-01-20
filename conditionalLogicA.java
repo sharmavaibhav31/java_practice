@@ -60,5 +60,6 @@ public class conditionalLogicA {
         } else {
             System.out.println(number + " is not a multiple of 5.");
         }
+        sc.close();
     }
 }

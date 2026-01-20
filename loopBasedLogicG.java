@@ -32,5 +32,7 @@ public class loopBasedLogicG {
             a = b;
             b = c;
         }
+    sc.close();
     }
+
 }

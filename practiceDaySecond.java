@@ -64,7 +64,7 @@ public class practiceDaySecond {
     }
 
     //Find the sum of all numbers below and above the left diagonal
-    public static void sumAboveBelowDiagonal(int[][] matrix){
+    public static void sumAboveBelowLeftDiagonal(int[][] matrix){
         int n = matrix.length;
         int sumAbove = 0;
         int sumBelow = 0;
@@ -82,6 +82,87 @@ public class practiceDaySecond {
         System.out.println("Sum Above Left Diagonal: " + sumAbove);
         System.out.println("Sum Below Left Diagonal: " + sumBelow);
     }
+
+    /*
+    Find the longest substring without repeating characters inside a given string.  
+
+     Input: HelloWorld     Output: World
+
+     Input: dvdf            Output: vdf
+
+     Input: abbas         Output: bas
+
+    */
+    public static void longestSubstring(String str){
+        int n = str.length();
+        String longestSubstr = "";
+        for(int i = 0; i < n; i++){
+            Set<Character> charSet = new HashSet<>();
+            String currentSubstr = "";
+            for(int j = i; j < n; j++){
+                char ch = str.charAt(j);
+                if(!charSet.contains(ch)){
+                    charSet.add(ch);
+                    currentSubstr += ch;
+                } else {
+                    break;
+                }
+            }
+            if(currentSubstr.length() > longestSubstr.length()){
+                longestSubstr = currentSubstr;
+            }
+        }
+        System.out.println("Longest substring without repeating characters: " + longestSubstr);
+    }
+
+    /*A fintech company system receives time series data from two different market data feeds that need to be merged, analyzed, and processed efficiently. 
+    Memory usage and processing speed are critical constraints due to the large volume of real-time data.  
+    Each data feed is a sorted list of tuples with format (timestamp, value).  Timestamp is an integer representing Unix timestamp (time elapsed since origin of time)
+
+    Write functions to
+
+        - Merge two data sets in place and also into a third list 
+
+        - Determine overlapping time periods with a 30 second window
+
+        Data stream
+
+        # Market Feed A (NYSE data)
+
+        feed_a = [
+
+        (1609459200, 150.25), # 2021-01-01 00:00:00
+
+        (1609459260, 150.80), # 2021-01-01 00:01:00
+
+        (1609459320, 151.15), # 2021-01-01 00:02:00
+
+        (1609459380, 150.90), # 2021-01-01 00:03:00
+
+        (1609459500, 151.40), # 2021-01-01 00:05:00
+
+        (1609459620, 151.75), # 2021-01-01 00:07:00
+
+        ]
+
+        # Market Feed B (NASDAQ data)
+
+        feed_b = [
+
+        (1609459220, 2500.30), # 2021-01-01 00:00:20
+
+        (1609459280, 2501.15), # 2021-01-01 00:01:20
+
+        (1609459400, 2499.80), # 2021-01-01 00:03:20
+
+        (1609459460, 2502.45), # 2021-01-01 00:04:20
+
+        (1609459580, 2503.10), # 2021-01-01 00:06:20
+
+        (1609459640, 2504.25), # 2021-01-01 00:07:20
+
+        ]
+    */
 
 
     public static void main(String[] args){
@@ -103,7 +184,10 @@ public class practiceDaySecond {
         }
         //findArmstrongNumbers();
         //diagonalSums(matrix);
-        sumAboveBelowDiagonal(matrix);
+        sumAboveBelowLeftDiagonal(matrix);
+
+
+
         sc.close();
     }
 }

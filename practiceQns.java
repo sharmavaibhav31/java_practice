@@ -1,5 +1,5 @@
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
+
 public class practiceQns {
 
 
@@ -177,6 +177,20 @@ public class practiceQns {
         }
     }
 
+    //14.  Write a program to print all the LEADERS in the array. An element is a leader if it is greater than all the elements to its right side. The rightmost element is always a leader.
+    public static void printLeaders(int[] arr){
+        int n = arr.length;
+        int rightMost = arr[n-1];
+        System.out.println("Leaders in the array are: ");
+        System.out.print(rightMost + " ");
+        for(int i = n - 2; i >= 0; i--){
+            if(arr[i] > rightMost){
+                rightMost = arr[i];
+                System.out.print(rightMost + " ");
+            }
+        }
+    }
+
     //16.  Given an array of integers, modify the array such that all even numbers appear at the beginning and all odd numbers appear at the end. The order of numbers does not matter.
     public static void evenOddArray(int[] arr){
         // int[] arrn = new int[arr.length];
@@ -242,6 +256,78 @@ public class practiceQns {
         
     }
 
+    /*
+    18.  Given an array nums, return an array where each element is the product of all elements except itself. Do it without using division and in O(n) time.
+    # Input: [1,2,3,4]
+    # Output: [24,12,8,6] 
+    */
+
+    public static int[] productArray(int[] nums){
+        // int n = nums.length;
+        // int[] result = new int[n];
+        // Arrays.fill(result, 1);
+
+        // for(int i = 0; i < n; i++){
+        //     for(int j = 0; j < n; j++){
+        //         if(i != j){
+        //             result[i] *= nums[j];
+        //         }
+        //     }
+        // }
+        // for(int i = 0; i < nums.length; i++){
+        //     System.out.print(result[i] + " ");
+        // }
+        // return result;      
+        int n = nums.length;
+        int leftProduct = 1;
+        int rightProduct = 1;
+        int[] result = new int[n];;
+        Arrays.fill(result, 1);
+
+        for (int i = 0; i < n; i++) {
+            result[i] = leftProduct;
+            leftProduct *= nums[i];
+        }    
+
+        for (int i = n - 1; i >= 0; i--) {
+            result[i] *= rightProduct;
+            rightProduct *= nums[i];
+        }
+
+        System.out.println("Product array is: ");
+        for(int i = 0; i < n; i++){
+            System.out.print(result[i] + "  ");
+        }      
+        return result;
+    }
+
+    /*
+    21.  Group all anagrams together in an array of words
+    Input
+    - {“eat”, “ant”, “tan”, “ate”, “tea”)
+    Output
+    – {“eat”, “ate”, “tea”, “ant”, “tan”}
+    Use HashMap for implementation
+    */
+    public static void groupAnagrams(String[] words){
+        Map<String, List<String>> map = new HashMap<>();
+        for(String word : words){
+            char[] charArray = word.toCharArray();
+            Arrays.sort(charArray);
+            String sortedWord = new String(charArray);
+            if(!map.containsKey(sortedWord)){
+                map.put(sortedWord, new ArrayList<>());
+            }
+            map.get(sortedWord).add(word);
+        }
+        List<List<String>> result = new ArrayList<>(map.values());
+        System.out.println("Grouped anagrams are: ");
+        for(List<String> group : result){
+            System.out.println(group);
+        }
+    }
+
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array size: ");
@@ -269,7 +355,9 @@ public class practiceQns {
         // compressString(str);
         // checkSubset(arr1, arr2);
         // reverseStrings(str);
-        evenOddArray(arr2);
+        // evenOddArray(arr2);
+        productArray(arr2);
+        
     }
 }
 

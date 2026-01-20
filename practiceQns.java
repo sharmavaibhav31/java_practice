@@ -19,6 +19,7 @@ public class practiceQns {
             System.out.print(arr[i] + " ");
         }
     }
+
     //2.  Find the duplicate elements in an array
     public static void findDuplicates(int[] arr){
         System.out.println("Duplicate elements are: ");
@@ -137,6 +138,19 @@ public class practiceQns {
         b = a - b;
         a = a - b;
         System.out.println("After swapping: a = " + a + ", b = " + b);
+    }
+
+    //11.  Count the number of times a character repeats in a string 
+    public static void countRepChar(String str){
+        Map<Character, Integer> charCountMap = new HashMap<>();
+        for(int i = 0; i < str.length(); i++){
+            char ch = str.charAt(i);
+            charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+        }
+        System.out.println("Character counts are: ");
+        for(Map.Entry<Character, Integer> entry : charCountMap.entrySet()){
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
     }
 
 

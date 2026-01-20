@@ -15,11 +15,11 @@ Find all the Armstrong numbers less than 999
 ---------------------
 
 Find the left and right diagonal sums of a n x n square matrix
-
+==Done==
 --------------------------
 
 Find the sum of all numbers below and above the left diagonal
-
+==Done==
 -------------------
 
 Find the longest substring without repeating characters inside a given string.  

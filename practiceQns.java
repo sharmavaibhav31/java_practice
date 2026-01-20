@@ -302,6 +302,15 @@ public class practiceQns {
     }
 
     /*
+    19.    Find all unique triplets in the array that sum to zero.
+    # Input: [-1,0,1,2,-1,-4]
+    # Output: [[-1,-1,2],[-1,0,1]]
+    Try for zero.
+    */
+     
+    
+
+    /*
     21.  Group all anagrams together in an array of words
     Input
     - {“eat”, “ant”, “tan”, “ate”, “tea”)

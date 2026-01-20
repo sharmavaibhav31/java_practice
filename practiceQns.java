@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class practiceQns {
 
 
@@ -179,6 +179,11 @@ public class practiceQns {
 
     //16.  Given an array of integers, modify the array such that all even numbers appear at the beginning and all odd numbers appear at the end. The order of numbers does not matter.
     public static void evenOddArray(int[] arr){
+        // int[] arrn = new int[arr.length];
+        // Arrays.sort(arr);
+        // for(int i = 0; i <arr.length; i++){
+        //     arrn[i] = arr[i];
+        // }
         int left = 0;
         int right = arr.length - 1;
         // while(left < right){

@@ -47,6 +47,18 @@ public class practiceQns {
         System.out.println("Second largest number is: " + secondLargest);
     }
 
+    //4.  Find the missing number in an array of size N containing numbers from 1 to N+1 without using hashmaps 
+    public static void missingNumber(int[] arr){
+        int n = arr.length + 1;
+        int total = n * (n + 1) / 2;
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        int missingNumber = total - sum;
+        System.out.println("Missing number is: " + missingNumber);
+    }
+
     //5.  Reverse a string without using built-in string functions
     public static void reverseStrings(String str){
         char[] array = str.toCharArray();
@@ -165,6 +177,47 @@ public class practiceQns {
         }
     }
 
+    //16.  Given an array of integers, modify the array such that all even numbers appear at the beginning and all odd numbers appear at the end. The order of numbers does not matter.
+    public static void evenOddArray(int[] arr){
+        int left = 0;
+        int right = arr.length - 1;
+        // while(left < right){
+        //     if(arr[left] % 2 == 0){
+        //         left++;
+        //     }
+        //     else if(arr[right] % 2 != 0){
+        //         right--;
+        //     }
+        //     else{
+        //         int temp = arr[left];
+        //         arr[left] = arr[right];
+        //         arr[right] = temp;
+        //         left++;
+        //         right--;
+        //     }
+        // }
+        while(left < right){
+            while(arr[left] % 2 == 0 && left < right){
+                left++;
+            }
+            while(arr[right] % 2 != 0 && left < right){
+                right--;
+            }
+            if(left < right){
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            }
+        }
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+
+
     //17.  Given two arrays, arr1 and arr2, check whether arr2 is a subset of arr1 (i.e., all elements of arr2 are present in arr1)
     public static void checkSubset(int[] arr1, int[] arr2){
         for(int i = 0; i < arr2.length; i++){
@@ -187,30 +240,31 @@ public class practiceQns {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array size: ");
-        int a = sc.nextInt();
+        //int a = sc.nextInt();
         int b = sc.nextInt();
-        String str = "aaabbccddeeeebb";
+        //String str = "aaabbccddeeeebb";
         System.out.println("Enter the array elements: ");
-        int[] arr1 = new int[a];
-        for(int i = 0; i < a; i++){
-            arr1[i] = sc.nextInt();
-        }
+        // int[] arr1 = new int[a];
+        // for(int i = 0; i < a; i++){
+        //     arr1[i] = sc.nextInt();
+        // }
         int[] arr2 = new int[b];
         for(int i = 0; i < b; i++){
             arr2[i] = sc.nextInt();
         }
-        movingZeros(arr1);
-        arrayIsSorted(arr1);
-        secondLargest(arr1);
-        firstRepeatingElement(arr1);
-        largestRepeatingElement(arr1);
-        reverseArray(arr1);
-        findDuplicates(arr1);
-        swapNumbers(a, b);
-        sc.close();
-        compressString(str);
-        checkSubset(arr1, arr2);
-        reverseStrings(str);
+        // movingZeros(arr1);
+        // arrayIsSorted(arr1);
+        // secondLargest(arr1);
+        // firstRepeatingElement(arr1);
+        // largestRepeatingElement(arr1);
+        // reverseArray(arr1);
+        // findDuplicates(arr1);
+        // swapNumbers(a, b);
+        // sc.close();
+        // compressString(str);
+        // checkSubset(arr1, arr2);
+        // reverseStrings(str);
+        evenOddArray(arr2);
     }
 }
 

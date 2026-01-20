@@ -307,8 +307,18 @@ public class practiceQns {
     # Output: [[-1,-1,2],[-1,0,1]]
     Try for zero.
     */
-     
-    
+    public static void uniqueTriplets(int[] arr){
+        int n = arr.length;
+        for(int i = 0; i < n; i++){
+            for(int j = i + 1; j < n; j++){
+                for(int k = 0; k < n; k++){
+                        if(arr[i] + arr[j] == arr[k]){
+                            System.out.println("Triplet found: " + arr[i] + ", " + arr[j] + ", " + arr[k]);
+                    }
+                }
+            }
+        }
+    }
 
     /*
     21.  Group all anagrams together in an array of words
@@ -340,32 +350,38 @@ public class practiceQns {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array size: ");
-        //int a = sc.nextInt();
+        int a = sc.nextInt();
         int b = sc.nextInt();
-        //String str = "aaabbccddeeeebb";
+        String str = "aaabbccddeeeebb";
         System.out.println("Enter the array elements: ");
-        // int[] arr1 = new int[a];
-        // for(int i = 0; i < a; i++){
-        //     arr1[i] = sc.nextInt();
-        // }
+        int[] arr1 = new int[a];
+        for(int i = 0; i < a; i++){
+            arr1[i] = sc.nextInt();
+        }
         int[] arr2 = new int[b];
         for(int i = 0; i < b; i++){
             arr2[i] = sc.nextInt();
         }
-        // movingZeros(arr1);
-        // arrayIsSorted(arr1);
-        // secondLargest(arr1);
-        // firstRepeatingElement(arr1);
-        // largestRepeatingElement(arr1);
-        // reverseArray(arr1);
-        // findDuplicates(arr1);
-        // swapNumbers(a, b);
-        // sc.close();
-        // compressString(str);
-        // checkSubset(arr1, arr2);
-        // reverseStrings(str);
-        // evenOddArray(arr2);
+        movingZeros(arr1);
+        arrayIsSorted(arr1);
+        secondLargest(arr1);
+        firstRepeatingElement(arr1);
+        largestRepeatingElement(arr1);
+        reverseArray(arr1);
+        findDuplicates(arr1);
+        swapNumbers(a, b);
+        compressString(str);
+        checkSubset(arr1, arr2);
+        reverseStrings(str);
+        evenOddArray(arr2);
         productArray(arr2);
+        missingNumber(arr1);
+        printLeaders(arr1);
+        groupAnagrams(new String[]{"eat", "ant", "tan", "ate", "tea"});
+
+        sc.close();
+
+
         
     }
 }

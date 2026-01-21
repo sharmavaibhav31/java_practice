@@ -1,0 +1,82 @@
+import java.util.Scanner;;
+
+public class practiceDayThird {
+    // Determin the first positive number where its English spelling is in the
+    // ascending order as per english alphabet.
+    public static void firstAscendingSpellingNumber() {
+        String[] spelling = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+                "twenty",
+                "twentyone", "twentytwo", "twentythree", "twentyfour", "twentyfive", "twentysix", "twentyseven",
+                "twentyeight", "twentynine", "thirty",
+                "thirtyone", "thirtytwo", "thirtythree", "thirtyfour", "thirtyfive", "thirtysix", "thirtyseven",
+                "thirtyeight", "thirtynine", "forty",
+                "fortyone", "fortytwo", "fortythree", "fortyfour", "fortyfive", "fortysix", "fortyseven", "fortyeight",
+                "fortynine", "fifty",
+                "fiftyone", "fiftytwo", "fiftythree", "fiftyfour", "fiftyfive", "fiftysix", "fiftyseven", "fiftyeight",
+                "fiftynine", "sixty",
+                "sixtyone", "sixtytwo", "sixtythree", "sixtyfour", "sixtyfive", "sixtysix", "sixtyseven", "sixtyeight",
+                "sixtynine", "seventy",
+                "seventyone", "seventytwo", "seventythree", "seventyfour", "seventyfive", "seventysix", "seventyseven",
+                "seventyeight", "seventynine", "eighty",
+                "eightyone", "eightytwo", "eightythree", "eightyfour", "eightyfive", "eightysix", "eightyseven",
+                "eightyeight", "eightynine", "ninety",
+                "ninetyone", "ninetytwo", "ninetythree", "ninetyfour", "ninetyfive", "ninetysix", "ninetyseven",
+                "ninetyeight", "ninetynine", "one hundred" };
+        // String spellStr = spelling.toString();
+        boolean isAscending;
+        for (int j = 0; j <= spelling.length - 1; j++) {
+            isAscending = true;
+            int i;
+            for (i = 1; i < spelling[j].length(); i++) {
+                if (spelling[j].charAt(i) < spelling[j].charAt(i - 1)) {
+                    isAscending = false;
+                    break;
+                }
+            }
+            if (isAscending) {
+                System.out.println(
+                        "The first positive number with ascending English spelling is: " + spelling[j] + " " + (j + 1));
+            }
+        }
+    }
+
+    //2. Given an array of n+1 integers where each integer is between 1 and n (inclusive), there is exactly one duplicate number. FInd the duplicate number using only for/while loop
+    public static void findDup(int[] arr){
+        int n = arr.length;
+        int start = 0;
+        int end = n-1;
+        boolean found = false;
+        while(start<end){
+            if(arr[start] == arr[end]){
+                found = true;
+                break;
+            }
+            else{
+                end--;
+            }
+        }
+        if(found) System.out.println("Found Duplicate integer: " + arr[start]);
+        else System.out.println("No duplicate integer found");
+    }
+
+    //3. Given an array representing heights of vertical lines drawn on x-axis, find two lines which together with x-axis forms a container such that the container contains the most water.
+    //Return the maximum amount of water a container can store.
+    public static void maxWaterContainer(int[] heights){
+        int n = heights.length;
+
+
+    public static void main(String[] args) {
+        //firstAscendingSpellingNumber();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array: ");
+        int n = sc.nextInt();
+        int[] array = new int[n];
+        System.out.println("Enter the array elements:  ");
+        for (int i = 0; i < n; i++) {
+            array[i] = sc.nextInt();
+        }
+        findDup(array);
+        sc.close();
+    }
+}

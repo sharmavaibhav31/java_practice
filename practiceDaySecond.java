@@ -118,51 +118,68 @@ public class practiceDaySecond {
     /*A fintech company system receives time series data from two different market data feeds that need to be merged, analyzed, and processed efficiently. 
     Memory usage and processing speed are critical constraints due to the large volume of real-time data.  
     Each data feed is a sorted list of tuples with format (timestamp, value).  Timestamp is an integer representing Unix timestamp (time elapsed since origin of time)
-
     Write functions to
-
         - Merge two data sets in place and also into a third list 
-
-        - Determine overlapping time periods with a 30 second window
-
-        Data stream
+        - Determine overlapping time periods with a 30 second window Data stream
 
         # Market Feed A (NYSE data)
-
         feed_a = [
-
         (1609459200, 150.25), # 2021-01-01 00:00:00
-
         (1609459260, 150.80), # 2021-01-01 00:01:00
-
         (1609459320, 151.15), # 2021-01-01 00:02:00
-
         (1609459380, 150.90), # 2021-01-01 00:03:00
-
         (1609459500, 151.40), # 2021-01-01 00:05:00
-
         (1609459620, 151.75), # 2021-01-01 00:07:00
-
         ]
 
         # Market Feed B (NASDAQ data)
-
         feed_b = [
-
         (1609459220, 2500.30), # 2021-01-01 00:00:20
-
         (1609459280, 2501.15), # 2021-01-01 00:01:20
-
         (1609459400, 2499.80), # 2021-01-01 00:03:20
-
         (1609459460, 2502.45), # 2021-01-01 00:04:20
-
         (1609459580, 2503.10), # 2021-01-01 00:06:20
-
         (1609459640, 2504.25), # 2021-01-01 00:07:20
-
         ]
     */
+
+    public static void mergeDataFeeds(List <int[]> feedA, List<int[]> feedB){
+        List<double[]> merged = new ArrayList<>();
+        int i = 0, j = 0;
+
+        while (i < feedA.size() && j < feedB.size()) {
+            if (feedA.get(i)[0] <= feedB.get(j)[0]) {
+                merged.add(feedA.get(i++));
+            } else {
+                merged.add(feedB.get(j++));
+            }
+        }
+        while (i < feedA.size()) merged.add(feedA.get(i++));        
+        while (j < feedB.size()) merged.add(feedB.get(j++));
+
+        int j = 0;
+        int window = 30; // seconds
+
+        for (double[] pointA : feedA) {
+            double timeA = pointA[0];
+
+            // Move pointer j to catch up to the window
+            while (j < feedB.size() && feedB.get(j)[0] < timeA - window) {
+                j++;
+            }
+
+            // Check all points in Feed B that fall within the window of Point A
+            int tempJ = j;
+            while (tempJ < feedB.size() && feedB.get(tempJ)[0] <= timeA + window) {
+                System.out.println("Overlap Found: Feed A (" + timeA + ") and Feed B (" 
+                                    + feedB.get(tempJ)[0] + ")");
+                tempJ++;
+            }
+        }
+}
+
+
+    }
 
 
     public static void main(String[] args){

@@ -56,7 +56,7 @@ public class practiceDaySecond {
 
         for(int i = 0; i < n; i++){
             leftDiagonalSum += matrix[i][i];
-            rightDiagonalSum += matrix[i][n - i - 1];
+            rightDiagonalSum += matrix[i][n - i - 1];    //i + j = n - 1 === i = 0 ,j = 0
         }
 
         System.out.println("Left Diagonal Sum: " + leftDiagonalSum);
@@ -71,9 +71,9 @@ public class practiceDaySecond {
 
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
-                if(j >= i){
+                if(j > i){
                     sumAbove += matrix[i][j];
-                } else if(j <= i){
+                } else if(j < i){
                     sumBelow += matrix[i][j];
                 }
             }

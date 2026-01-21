@@ -84,13 +84,13 @@ public class practiceDayThird {
     }
 
     /*
-    4. You are given a 2D grid representing a room. "0" represents an empty tile and "1" represents a wall, and "2" represents a zombie.
-    The Zombie can infect the adjacent - up, down, left and right cell into a zombie.
-    The input is the Coordinates of a zombie present in the grid, write a function to show the state of the grid after all possible infections
-    use the starting point of the zombie as input to the function, and each step of infection to be used as starting point for next infection.
+    4. You are given a 2D grid representing a room. “0” represents an empty tile, “1” represents a wall and “2” represents a Zombie.  
+    When a Zombie is placed on a tile, it infects all connected "empty" tiles (Up, Down, Left, Right) recursively.
+    Your Challenge: Given a starting coordinate (r, c) for a new Zombie, write a recursive function to turn all reachable 0s into 2s.
     */ 
 
     public static void ZombieGrid(int[][] grid, int x, int y){
+
 
 
     }

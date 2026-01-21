@@ -90,30 +90,82 @@ public class practiceDayThird {
     */ 
 
     public static void ZombieGrid(int[][] grid, int x, int y){
+        if(x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] != 0){
+            return;
+        }
+        System.out.println("The updated grid after infection: ");
+        for(int i = 0; i < grid.length; i++){
+            for(int j = 0; j < grid[0].length; j++){
+                System.out.print(grid[i][j] + " ");
+            }
+            System.out.println();
+        }
+        grid[x][y] = 2;
+        ZombieGrid(grid, x + 1, y); // down
+        ZombieGrid(grid, x - 1, y); // up
+        ZombieGrid(grid, x, y + 1); // right
+        ZombieGrid(grid, x, y - 1); // left
+    }
 
+    /*
+    5. Given a string “s” and a dictionary of strings wordDict, add spaces in s to construct a sentence where each word is a valid dictionary word. 
+    Return all such possible sentences in any order.
+    Input: s = "catsanddog",
+    wordDict = ["cat","cats","and","sand","dog"]
+    Output: ["cats and dog","cat sand dog"]
 
+    Input: s = "catsandog",
+    wordDict = ["cats","dog","sand","and","cat"]
+    Output: []
 
+    1. Traverse each character in String
+    2. Check if the substring from start to current character exists in wordDict
+    3. If it exists, recursively call the function for the remaining substring
+    4. If the end of the string is reached, add the constructed sentence to the result list
+    5. Backtrack to explore other possible segmentations
+    6. Return the result list containing all valid sentences
+    7. If no valid segmentation is found, return an empty list
+    */
+
+    public static void wordSplit(String s, String[] wordDict){
+        for(int i = 0; i < s.length(); i++){
+            String prefix = s.substring(0, i + 1);
+            for(String word : wordDict){
+                if(prefix.equals(word)){
+                    String suffix = s.substring(i + 1);
+                    System.out.println("Prefix: " + prefix + ", Suffix: " + suffix);
+                    if(suffix.length() == 0){
+                        return;
+                    }
+                    wordSplit(suffix, wordDict);
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of the array: ");
-        int n = sc.nextInt();
-        int[] array = new int[n];
-        System.out.println("Enter the array elements:  ");
-        for (int i = 0; i < n; i++) {
-            array[i] = sc.nextInt();
-        }
-        int[][] ZombieMat = {
-                    {1,1,1,1,1},
-                    {1,0,0,0,1},
-                    {1,0,2,0,1},
-                    {1,0,0,0,1},
-                    {1,1,1,1,1}
-                    };
+        //System.out.println("Enter the size of the array: ");
+        //int n = sc.nextInt();
+        //int[] array = new int[n];
+        //System.out.println("Enter the array elements:  ");
+        // for (int i = 0; i < n; i++) {
+        //     array[i] = sc.nextInt();
+        // }
+        String[] wordDict = {"cat","cats","and","sand","dog"};
+        String s = "catsanddog";
+        wordSplit(s, wordDict);
+        // int[][] ZombieMat = {
+        //             {1,1,1,1,1},
+        //             {1,0,0,0,1},
+        //             {1,0,0,0,1},
+        //             {1,0,0,0,1},
+        //             {1,1,1,1,1}
+        //             };
+        // ZombieGrid(ZombieMat, 2, 1);
         //findDup(array);
         //firstAscendingSpellingNumber();
-        maxWaterContainer(array);
+        //maxWaterContainer(array);
         sc.close();
     }
 }

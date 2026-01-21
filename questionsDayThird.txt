@@ -7,6 +7,7 @@
 4. You are given a 2D grid representing a room. “0” represents an empty tile, “1” represents a wall and “2” represents a Zombie.  
 When a Zombie is placed on a tile, it infects all connected "empty" tiles (Up, Down, Left, Right) recursively.
 Your Challenge: Given a starting coordinate (r, c) for a new Zombie, write a recursive function to turn all reachable 0s into 2s.
+//done 
 
 5. Given a string “s” and a dictionary of strings wordDict, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences in any order.Input: s = "catsanddog",
 wordDict = ["cat","cats","and","sand","dog"]
@@ -15,6 +16,7 @@ Output: ["cats and dog","cat sand dog"]
 Input: s = "catsandog",
 wordDict = ["cats","dog","sand","and","cat"]
 Output: []
+//done
 
 6.  Find if a given string is valid or not.  A string is valid if you can generate it by inserting the characters “abc” any number of times starting from an empty string
 Input1: aabcbc

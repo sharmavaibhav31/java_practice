@@ -60,14 +60,42 @@ public class practiceDayThird {
         else System.out.println("No duplicate integer found");
     }
 
-    //3. Given an array representing heights of vertical lines drawn on x-axis, find two lines which together with x-axis forms a container such that the container contains the most water.
+    //3. Given an array representing heights of vertical lines drawn on x-axis, 
+    // find two lines which together with x-axis forms a container such that the container contains the most water. use recursion to solve this problem.
     //Return the maximum amount of water a container can store.
     public static void maxWaterContainer(int[] heights){
         int n = heights.length;
+        int maxArea = 0;
+        int right = 0;
+        int left = n - 1;
+    
+        while(left < right){
+            int height = Math.min(heights[left], heights[right]);
+            int base = right - left;
+            int area = height * base;
+            maxArea = Math.max(area, maxArea);
+            if(heights[left] <= heights[right]){
+                left++;
+            } else {
+                right--;
+            }
+        }
+        System.out.println("The maximum amount of water a container can store is: " + maxArea);      
+    }
 
+    /*
+    4. You are given a 2D grid representing a room. "0" represents an empty tile and "1" represents a wall, and "2" represents a zombie.
+    The Zombie can infect the adjacent - up, down, left and right cell into a zombie.
+    The input is the Coordinates of a zombie present in the grid, write a function to show the state of the grid after all possible infections
+    use the starting point of the zombie as input to the function, and each step of infection to be used as starting point for next infection.
+    */ 
+
+    public static void ZombieGrid(int[][] grid, int x, int y){
+
+
+    }
 
     public static void main(String[] args) {
-        //firstAscendingSpellingNumber();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of the array: ");
         int n = sc.nextInt();
@@ -76,7 +104,16 @@ public class practiceDayThird {
         for (int i = 0; i < n; i++) {
             array[i] = sc.nextInt();
         }
-        findDup(array);
+        int[][] ZombieMat = {
+                    {1,1,1,1,1},
+                    {1,0,0,0,1},
+                    {1,0,2,0,1},
+                    {1,0,0,0,1},
+                    {1,1,1,1,1}
+                    };
+        //findDup(array);
+        //firstAscendingSpellingNumber();
+        maxWaterContainer(array);
         sc.close();
     }
 }

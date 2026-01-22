@@ -48,12 +48,14 @@ public class practiceDayThird {
         int end = n-1;
         boolean found = false;
         while(start<end){
-            if(arr[start] == arr[end]){
-                found = true;
-                break;
+            if(arr[start] != arr[end]){
+                found = false;
+                start++;
+                end--;
             }
             else{
-                end--;
+                found = true;
+                break;
             }
         }
         if(found) System.out.println("Found Duplicate integer: " + arr[start]);
@@ -143,18 +145,43 @@ public class practiceDayThird {
         }
     }
 
+
+    /*
+    6.  Find if a given string is valid or not. A string is valid if you can generate it by inserting the characters “abc” any number of times starting from an empty string
+    Input1: aabcbc
+    Output: Valid.  
+    Since the input string can be obtained by inserting abc into empty string and then again abc after the first a (aabcbc)
+
+    Input2: abcabcabc
+    Output: Valid.  
+
+    Input3: abccba
+    Output: Not Valid
+    */
+
+    public static void validString(String str){
+        while(str.contains("abc")){
+            str = str.replace("abc", "");
+        }
+        if(str.isEmpty()){
+            System.out.println("The string is valid");
+        } else {
+            System.out.println("The string is not valid");
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //System.out.println("Enter the size of the array: ");
-        //int n = sc.nextInt();
-        //int[] array = new int[n];
-        //System.out.println("Enter the array elements:  ");
-        // for (int i = 0; i < n; i++) {
-        //     array[i] = sc.nextInt();
+        // System.out.println("Enter the size of the array: ");
+        // int n = sc.nextInt();
+        // int[] array = new int[n];
+        // System.out.println("Enter the array elements:  ");
+        //  for (int i = 0; i < n; i++) {
+        //      array[i] = sc.nextInt();
         // }
-        String[] wordDict = {"cat","cats","and","sand","dog"};
-        String s = "catsanddog";
-        wordSplit(s, wordDict);
+        // String[] wordDict = {"cat","cats","and","sand","dog"};
+        // String s = "catsanddog";
+        // wordSplit(s, wordDict);
         // int[][] ZombieMat = {
         //             {1,1,1,1,1},
         //             {1,0,0,0,1},
@@ -166,6 +193,7 @@ public class practiceDayThird {
         //findDup(array);
         //firstAscendingSpellingNumber();
         //maxWaterContainer(array);
+        validString("abcabcabc"); 
         sc.close();
     }
 }

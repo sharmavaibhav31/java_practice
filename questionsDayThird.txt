@@ -1,6 +1,7 @@
 1. Determine the first positive number where its English spelling is in the ascending order as per the English alphabet //done
 
-2. Given an array of n+1 integers where each integer is between 1 and n (inclusive), there is exactly one duplicate number. Find the duplicate number using only one for/while loop. //done
+2. Given an array of n+1 integers where each integer is between 1 and n (inclusive), 
+there is exactly one duplicate number. Find the duplicate number using only one for/while loop. //done
 
 3. Given an array representing heights of vertical lines, find two lines that together with x-axis forms a container that holds the most water //done
 
@@ -18,9 +19,10 @@ wordDict = ["cats","dog","sand","and","cat"]
 Output: []
 //done
 
-6.  Find if a given string is valid or not.  A string is valid if you can generate it by inserting the characters “abc” any number of times starting from an empty string
+6.  Find if a given string is valid or not. A string is valid if you can generate it by inserting the characters “abc” any number of times starting from an empty string
 Input1: aabcbc
-Output: Valid.  Since the input string can be obtained by inserting abc into empty string and then again abc after the first a (aabcbc)
+Output: Valid.  
+Since the input string can be obtained by inserting abc into empty string and then again abc after the first a (aabcbc)
 
 Input2: abcabcabc
 Output: Valid.  

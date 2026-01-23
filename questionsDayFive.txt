@@ -1,0 +1,1 @@
+// 1. 5 items 1,2,3,3, and 4 kg have values 2,3,2,4 and 5.  Which items will you put into the bag that can handle 7kg to maximize value?

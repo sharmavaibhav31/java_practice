@@ -64,6 +64,65 @@ public class practiceDayFourth {
         System.out.println("Total number of ideal arrays: " + count);
     }
 
+    /*
+    3.  Return the number of steps needed to make the given array empty by following the rules below
+     1. If the first element is the smallest, remove it
+     2. If the first element is not the smallest, move that element to the end
+    */
+
+     public static int countSteps(int[] arr){
+        int steps = 0;
+        int n = arr.length;
+        while(n > 0){
+            int minIndex = 0;
+            for(int i = 0; i < n; i++){
+                if(arr[i] < arr[minIndex]){
+                    minIndex = i;
+                }
+            }
+            if(minIndex == 0){
+                for(int i = 1; i < n; i++){
+                    arr[i-1] = arr[i];
+                }
+            }
+        }
+        
+        
+        // int steps = 0;
+        // int n = arr.length;
+        // while(n > 0){
+        //     int minIndex = 0;
+        //     for(int i = 1; i < n; i++){
+        //         if(arr[i] < arr[minIndex]){
+        //             minIndex = i;
+        //         }
+        //     }
+        //     if(minIndex == 0){
+        //         // remove first element
+        //         int[] newArr = new int[n-1];
+        //         for(int i = 1; i < n; i++){
+        //             newArr[i-1] = arr[i];
+        //         }
+        //         arr = newArr;
+        //         n--;
+        //     } else {
+        //         // move first element to end
+        //         int firstElement = arr[0];
+        //         int[] newArr = new int[n];
+        //         for(int i = 1; i < n; i++){
+        //             newArr[i-1] = arr[i];
+        //         }
+        //         newArr[n-1] = firstElement;
+        //         arr = newArr;
+        //     }
+        //     steps++;
+        // }
+        // return steps;
+
+     }
+
+
+
     //5. Given two strings, check if the second string is a rotation of the first string.
     public boolean rotateString(String s, String goal) {
         if(s.length() != goal.length()){

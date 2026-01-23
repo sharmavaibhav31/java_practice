@@ -17,6 +17,7 @@ Print the maximum of elements in each position of the sliding window as an array
      2. If the first element is not the smallest, move that element to the end
 
 
+
 4.  Write the given string in a zig zag pattern over a given number of rows and then combine all the lines as output. 
 
 E.g. The string "PAYPALISHIRING" is written in a zigzag pattern over 3 rows as :

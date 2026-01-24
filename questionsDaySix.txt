@@ -17,9 +17,11 @@
     The NXE for X is the first greater element on the right side of X in the array
     If no greater element present consider the next greater element to be -1
 
+
     Given an input of string S which consists of * and # write a function to find the minimum number of * or # required to make the string Vallid
     The string is Valid if it has equal number of * and #
     The putput must be zero, positive or negative number based on * and # in the given string
+
 
     Rotate a one dimensional array to the right by k steps
     Do it in place with O(1) extra spaces

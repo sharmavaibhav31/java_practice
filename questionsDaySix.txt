@@ -1,4 +1,36 @@
 
+
+
+1.  Write a function to determine the valid squares for a knight to move on a chessboard given the starting position of knight in (row, column) format
+
+2.  Given an input string S which consists of ‘*’ and ‘#’, write a function / program to find the minimum number of ‘*’ or ‘#’ to make it a valid string. 
+    The string is considered valid if the number of ‘*’ and ‘#’ are equal. 
+    The ‘*’ and ‘#’ can be at any position in the string.
+    Note : The output must be zero, positive or negative integer based on number of ‘*’ and ‘#’ in the input string.
+
+3.  Take an array as user input and print the Next Greater Element (NGE) for every element.
+    Note: The NGE for an element x is the first greater element on the right side of x in the array. 
+    Elements for which no greater element exist, consider the next greater element as -1.
+
+4.  Rotate a one-dimensional array to the right by k steps. Do it in-place with O(1) extra space.
+
+5.  Generate N sets of x and y coordinates corresponding to positions of free end of a rod Y cm long, 
+    which is pivoted about the point (0,X) at the other end so that it is free to rotate clockwise with (0,X) as center.
+    X, Y and N must be user inputs and must be all positive integers.
+    Other conditions
+    1. The output coordinates must include 4 decimal places
+    2. The output coordinates must be equidistant from each other in the circular coordinates
+
+6.  "You are hopping across a river using floating stones marked with numbers.”
+    Rule 1: You can land on any stone to start.
+    Rule 2: You can jump forward to any stone, BUT it must have a strictly higher number than the one you are standing on.
+    Goal: Touch the maximum number of stones possible.  
+    Input: Floating stones [10, 9, 2, 5, 3, 7, 101, 18]
+    Output: 4 (2->5->7->18 or 2->3->7->18 or 2->5->7->101 or 2->3->7->101)
+
+
+
+
     You are hopping across a river using floating stones marked with numbers.
     Rule 1: You can hop on to any stone to start with
     RUle 2: The next step should be to the stone with number greater than the current stone

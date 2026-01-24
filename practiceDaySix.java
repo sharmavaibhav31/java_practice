@@ -100,12 +100,12 @@ public class practiceDaySix {
         }
 
     public static void main(String[] args){
-        //findCoordinate(3, 4, 5);
-        // int[] arr = {7, 45, 3, 32, 74};
-        // nXE(arr);
-        // nXE({[9,8,7,6,10]});
-        // nXE([22,33,6,4,2]);
-        //System.out.println(validStr("A#B#c"));
+        findCoordinate(3, 4, 5);
+        int[] arr = {7, 45, 3, 32, 74};
+        nXE(arr);
+        nXE({[9,8,7,6,10]});
+        nXE([22,33,6,4,2]);
+        System.out.println(validStr("A#B#c"));
         int[] arr = {1,2,3,4,5,6,7};
         rotateArray(arr, 3); 
     }

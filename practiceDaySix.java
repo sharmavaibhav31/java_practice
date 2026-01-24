@@ -77,7 +77,6 @@ public class practiceDaySix {
     /*
     Rotate a one dimensional array to the right by k steps
     Do it in place with O(1) extra spaces
-    use two pointer or recursion
     */
 
     public static void rotateArray(int[] arr, int k){

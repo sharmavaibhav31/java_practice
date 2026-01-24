@@ -1,0 +1,25 @@
+
+    You are hopping across a river using floating stones marked with numbers.
+    Rule 1: You can hop on to any stone to start with
+    RUle 2: The next step should be to the stone with number greater than the current stone
+    
+    
+    Generate the N sets of X and Y coordinates corresponding to positions of free end of a rod Y cm long, 
+    which is pivoted abput the point (0,X) at the other end so that it is free to rotate clockwise with (0,X) as center.
+    X,Y,N are user inputs and must be all positive
+    output coordinates must have 4 decimal places
+    The output should be equidistant from each other in the circular coordinates,
+    Use Circle Formula
+    
+
+    Next Greater Element
+    Take an array as user Input and print the next greater element for every element
+    The NXE for X is the first greater element on the right side of X in the array
+    If no greater element present consider the next greater element to be -1
+
+    Given an input of string S which consists of * and # write a function to find the minimum number of * or # required to make the string Vallid
+    The string is Valid if it has equal number of * and #
+    The putput must be zero, positive or negative number based on * and # in the given string
+
+    Rotate a one dimensional array to the right by k steps
+    Do it in place with O(1) extra spaces

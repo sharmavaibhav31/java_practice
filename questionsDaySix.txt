@@ -30,7 +30,6 @@
 
 
 
-
     You are hopping across a river using floating stones marked with numbers.
     Rule 1: You can hop on to any stone to start with
     RUle 2: The next step should be to the stone with number greater than the current stone

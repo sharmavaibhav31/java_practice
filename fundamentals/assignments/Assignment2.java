@@ -1,13 +1,34 @@
-/*
-Java Programming Assignment 2
+/*Java Programming Assignment 2
 Question 1:
-Write a Java program to demonstrate the usage of return types and arguments. Create a method that takes two integers as arguments and returns their sum. Then, call this method from the main method and display the result.
+Write a Java program to demonstrate the usage of return types and arguments. Create a method that takes two integers as arguments and returns their sum. 
+Then, call this method from the main method and display the result.
 Clarifications:
 1. Define a method that takes two integer arguments and returns their sum.
 2. In the main method, call the method with appropriate arguments and display the returned result.
 3. Ensure the correct return type and arguments are used for the method.
 Expected Output:
 Sum of 5 and 10: 15
+*/
+
+package fundamentals.assignments;
+
+public class Assignment2 {
+
+    public int sum(int a, int b){
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        Assignment2 assignment = new Assignment2();
+        int result = assignment.sum(5, 10);
+        System.out.println("Sum of 5 and 10: " + result);
+    }
+}
+
+
+
+
+/*
 Question 2:
 Explain the concept of 'public static void main' in Java. Write a program that demonstrates the execution of a simple 'public static void main' method, and explain its components: 'public', 'static', 'void', and 'main'.
 Clarifications:
@@ -37,6 +58,3 @@ Expected Output:
 Dog makes a sound: Woof
 Dog can play: Yes*/
 
-public class Assignment2 {
-
-}

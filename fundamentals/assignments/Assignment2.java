@@ -1,5 +1,6 @@
 package fundamentals.assignments;
 import fundamentals.assignments.Student;
+import fundamentals.assignments.*;
 
 /*Java Programming Assignment 2
 Question 1:
@@ -33,17 +34,30 @@ Student Information:
 Name: John Doe
 Age: 20
 Grade: A
+
+Question 4:
+Write a Java program to demonstrate inheritance, interfaces, and method overriding. Create a superclass 'Animal' with a method 'sound'. 
+Then, create a subclass 'Dog' that overrides the 'sound' method. Use an interface 'Playable' that defines a 'play' method, and have 'Dog' implement the 'Playable' interface.
+Clarifications:
+1. Create an 'Animal' class with a method 'sound'.
+2. Create a 'Dog' class that inherits from 'Animal' and overrides the 'sound' method.
+3. Define an interface 'Playable' with a 'play' method, and implement it in the 'Dog' class.
+4. Demonstrate the use of inheritance and method overriding in the main method.
+Expected Output:
+Dog makes a sound: Woof
+Dog can play: Yes
 */
 
 
 public class Assignment2 {
+
     public static void main(String[] args) {
-        Student student = new Student("Rishik", 20, "A");
-        System.out.println("Student Information:");
-        System.out.println("Name: " + student.name);
-        System.out.println("Age: " + student.age);
-        System.out.println("Grade: " + student.grade);
-    }    
+    Animal animal = new Animal();
+    Dog dog = new Dog();   
+    System.out.println("Dog makes a sound: ");
+    dog.sound();
+    dog.play();
+    }
 }
 
 
@@ -75,15 +89,11 @@ public class Assignment2 {
         System.out.println("'main': The main method is the entry point of a Java program.");
     }
 
-
-Question 4:
-Write a Java program to demonstrate inheritance, interfaces, and method overriding. Create a superclass 'Animal' with a method 'sound'. Then, create a subclass 'Dog' that overrides the 'sound' method. Use an interface 'Playable' that defines a 'play' method, and have 'Dog' implement the 'Playable' interface.
-Clarifications:
-1. Create an 'Animal' class with a method 'sound'.
-2. Create a 'Dog' class that inherits from 'Animal' and overrides the 'sound' method.
-3. Define an interface 'Playable' with a 'play' method, and implement it in the 'Dog' class.
-4. Demonstrate the use of inheritance and method overriding in the main method.
-Expected Output:
-Dog makes a sound: Woof
-Dog can play: Yes*/
+    public static void main(String[] args) {
+        Student student = new Student("Rishik", 20, "A");
+        System.out.println("Student Information:");
+        System.out.println("Name: " + student.name);
+        System.out.println("Age: " + student.age);
+        System.out.println("Grade: " + student.grade);
+    }    */
 

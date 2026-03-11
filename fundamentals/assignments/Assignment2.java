@@ -8,11 +8,38 @@ Clarifications:
 3. Ensure the correct return type and arguments are used for the method.
 Expected Output:
 Sum of 5 and 10: 15
+
+Question 2:
+Explain the concept of 'public static void main' in Java. Write a program that demonstrates the execution of a simple 'public static void main' method, and explain its components: 
+'public', 'static', 'void', and 'main'.
+Clarifications:
+1. Define the 'public static void main' method in your program.
+2. Explain the purpose of 'public', 'static', 'void', and 'main' in the method declaration.
+3. Implement a simple program that outputs 'Hello, World!' using the main method.
+
 */
+
+
 
 package fundamentals.assignments;
 
 public class Assignment2 {
+
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        System.out.println("Explanation of 'public static void main':");
+        System.out.println("'public': The method is accessible from anywhere in the program. Public is a keyword for access modifier that allows the method to be called from outside the class.");
+        System.out.println("'static': The static keyword indicates that the method belongs to the class and can be called without creating an instance of the class.");
+        System.out.println("'void': The void keyword indicates that the method does not return any value. In the place of void, other return types can be used to specify the return type of the method");
+        System.out.println("'main': The main method is the entry point of a Java program.");
+    }
+}
+
+
+
+
+/*
+
 
     public int sum(int a, int b){
         return a + b;
@@ -23,18 +50,6 @@ public class Assignment2 {
         int result = assignment.sum(5, 10);
         System.out.println("Sum of 5 and 10: " + result);
     }
-}
-
-
-
-
-/*
-Question 2:
-Explain the concept of 'public static void main' in Java. Write a program that demonstrates the execution of a simple 'public static void main' method, and explain its components: 'public', 'static', 'void', and 'main'.
-Clarifications:
-1. Define the 'public static void main' method in your program.
-2. Explain the purpose of 'public', 'static', 'void', and 'main' in the method declaration.
-3. Implement a simple program that outputs 'Hello, World!' using the main method.
 
 Question 3:
 Write a Java program to demonstrate the concepts of classes, objects, and constructors. Create a class 'Student' with attributes like 'name', 'age', and 'grade'. Use a constructor to initialize these attributes, and then create an object of the class in the main method to display the student's information.

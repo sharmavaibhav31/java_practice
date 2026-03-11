@@ -51,7 +51,31 @@ Dog can play: Yes
 
 public class Assignment2 {
 
+    public int sum(int a, int b){
+        return a + b;
+    }
+
+    public void demonstratePSVM() {
+        System.out.println("Hello, World!");
+        System.out.println("Explanation of 'public static void main':");
+        System.out.println("'public': The method is accessible from anywhere in the program. Public is a keyword for access modifier that allows the method to be called from outside the class.");
+        System.out.println("'static': The static keyword indicates that the method belongs to the class and can be called without creating an instance of the class.");
+        System.out.println("'void': The void keyword indicates that the method does not return any value. In the place of void, other return types can be used to specify the return type of the method");
+        System.out.println("'main': The main method is the entry point of a Java program.");
+    }
+
     public static void main(String[] args) {
+
+        Assignment2 assignment = new Assignment2();
+        int result = assignment.sum(5, 10);
+        System.out.println("Sum of 5 and 10: " + result);
+
+        Student student = new Student("Rishik", 20, "A");
+        System.out.println("Student Information:");
+        System.out.println("Name: " + student.name);
+        System.out.println("Age: " + student.age);
+        System.out.println("Grade: " + student.grade);
+
     Animal animal = new Animal();
     Dog dog = new Dog();   
     System.out.println("Dog makes a sound: ");
@@ -66,34 +90,4 @@ public class Assignment2 {
 
 
 
-
-/*
-
-
-    public int sum(int a, int b){
-        return a + b;
-    }
-
-    public static void main(String[] args) {
-        Assignment2 assignment = new Assignment2();
-        int result = assignment.sum(5, 10);
-        System.out.println("Sum of 5 and 10: " + result);
-    }
-
-    public demonstratePSVM() {
-        System.out.println("Hello, World!");
-        System.out.println("Explanation of 'public static void main':");
-        System.out.println("'public': The method is accessible from anywhere in the program. Public is a keyword for access modifier that allows the method to be called from outside the class.");
-        System.out.println("'static': The static keyword indicates that the method belongs to the class and can be called without creating an instance of the class.");
-        System.out.println("'void': The void keyword indicates that the method does not return any value. In the place of void, other return types can be used to specify the return type of the method");
-        System.out.println("'main': The main method is the entry point of a Java program.");
-    }
-
-    public static void main(String[] args) {
-        Student student = new Student("Rishik", 20, "A");
-        System.out.println("Student Information:");
-        System.out.println("Name: " + student.name);
-        System.out.println("Age: " + student.age);
-        System.out.println("Grade: " + student.grade);
-    }    */
 

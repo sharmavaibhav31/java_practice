@@ -1,6 +1,8 @@
 package fundamentals.assignments;
 /*Question 1:
-Write a Java program that demonstrates user input and file handling. The program should prompt the user to enter their complete name (the student should enter his/her first and last name) and a text file name, append the complete name to the specified file content, read the file's content, and display it on the console.
+Write a Java program that demonstrates user input and file handling. 
+The program should prompt the user to enter their complete name (the student should enter his/her first and last name) and a text file name, 
+append the complete name to the specified file content, read the file's content, and display it on the console.
 Clarifications:
 1. Use the Scanner class to read user input for the file name.
 2. Append your complete name to the specified file, then read and display the file's content on the console.

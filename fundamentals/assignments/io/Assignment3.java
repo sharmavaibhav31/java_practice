@@ -71,7 +71,7 @@ class Assignment3 {
         }
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter your name: ");
-        String name = reader.readLine();
+        name = reader.readLine();
         System.out.print("Enter your age: ");
         int age = Integer.parseInt(reader.readLine());
         System.out.println("Your name is \'" + name + "\' and you are " + age + " years old.");

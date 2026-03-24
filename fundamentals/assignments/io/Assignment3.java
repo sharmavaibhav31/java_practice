@@ -7,6 +7,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.HashSet;
 /*Question 1:
 Write a Java program that demonstrates user input and file handling. 
 The program should prompt the user to enter their complete name (the student should enter his/her first and last name) and a text file name, 
@@ -33,8 +36,17 @@ Clarifications:
 1. Use BufferedReader to read user input for name and age.
 2. Use the readLine() method to read strings and the parseInt() method to read integers.
 3. Display the user's name and age in a formatted message. 
-*/
 
+Question 4:
+Write a Java program that demonstrates the use of ArrayLists, LinkedLists, and HashSet from the Collections Framework. 
+The program should add elements to each of these collections and display them.
+Clarifications:
+1. Create an ArrayList and add a few elements. Display the ArrayList.
+2. Create a LinkedList, add elements, and display the LinkedList.
+3. Create a HashSet, add elements, and display the HashSet.
+4. Explain the differences between ArrayList, LinkedList, and HashSet.
+*/
+/*
 class Assignment3 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
@@ -75,5 +87,42 @@ class Assignment3 {
         System.out.print("Enter your age: ");
         int age = Integer.parseInt(reader.readLine());
         System.out.println("Your name is \'" + name + "\' and you are " + age + " years old.");
+    }
+}
+*/
+
+// Question 4:
+// Write a Java program that demonstrates the use of ArrayLists, LinkedLists, and HashSet from the Collections Framework. 
+// The program should add elements to each of these collections and display them.
+// Clarifications:
+// 1. Create an ArrayList and add a few elements. Display the ArrayList.
+// 2. Create a LinkedList, add elements, and display the LinkedList.
+// 3. Create a HashSet, add elements, and display the HashSet.
+// 4. Explain the differences between ArrayList, LinkedList, and HashSet.
+class Assignment3{
+    public static void main(String[] args) {
+
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Cherry");
+        System.out.println("ArrayList: " + arrayList);
+
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("Dog");
+        linkedList.add("Cat");
+        linkedList.add("Rabbit");
+        System.out.println("LinkedList: " + linkedList);
+
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("Red");
+        hashSet.add("Green");
+        hashSet.add("Blue");
+        System.out.println("HashSet: " + hashSet);
+
+        System.out.println("\nDifferences:");
+        System.out.println("1. ArrayList is a resizable array implementation, while LinkedList is a doubly-linked list implementation.");
+        System.out.println("2. ArrayList allows fast random access to elements, while LinkedList allows for efficient insertion and deletion.");
+        System.out.println("3. HashSet is a collection that does not allow duplicate elements and does not maintain any order, while ArrayList and LinkedList allow duplicates and maintain the order of insertion.");
     }
 }

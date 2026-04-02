@@ -13,7 +13,7 @@ public class CollectionsPracatice {
         list2.add(13);
         list1.addAll(list2);
         System.out.println(list1);
-        list2.addAll(list1);
+        list2.clear();
         System.out.println(list2);
     }
 }

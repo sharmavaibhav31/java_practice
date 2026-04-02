@@ -24,6 +24,11 @@ public class CollectionsPracatice {
         map.put(2, "Two");
         map.put(3, "Three");
         System.out.println(map);
+        for(Integer n: map.keySet()){
+            System.out.println(n);
+            String str = map.get(n);
+            System.out.println(str);
+        }
 
     }
 }

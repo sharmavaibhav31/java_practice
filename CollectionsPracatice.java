@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class CollectionsPracatice {
-    public static void mian(String[] args) {
+    public static void main(String[] args) {
         System.out.println("Hello World");
         ArrayList<Integer> list1 = new ArrayList<Integer>();
         ArrayList<Integer> list2 = new ArrayList<Integer>();

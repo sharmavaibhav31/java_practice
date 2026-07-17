@@ -1,10 +1,6 @@
 package training_2026;
 
 
-// 17. Program to print primes in the user given range
-// 18. Program to count primes in the user given range
-// 19. Program to check the difference of max prime and min prime in the user given range
-// 20. Program to check given number is palindrome or not
 public class practiceSet1 {
 
     // 1. Program to swap two numbers without using third variable
@@ -143,6 +139,57 @@ public class practiceSet1 {
         }
         return true;
     }
+
+    // 17. Program to print primes in the user given range
+    public static void printPrimesInRange(int start, int end){
+        System.out.print("Prime numbers between " + start + " and " + end + ": ");
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    // 18. Program to count primes in the user given range
+    public static int countPrimesInRange(int start, int end){
+        int count = 0;
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // 19. Program to check the difference of max prime and min prime in the user given range
+    public static int differenceMaxMinPrimeInRange(int start, int end){
+        int minPrime = Integer.MAX_VALUE;
+        int maxPrime = Integer.MIN_VALUE;
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                if (i < minPrime) minPrime = i;
+                if (i > maxPrime) maxPrime = i;
+            }
+        }
+        if (minPrime == Integer.MAX_VALUE || maxPrime == Integer.MIN_VALUE) {
+            return -1; // No primes found
+        }
+        return maxPrime - minPrime;
+    }
+
+    // 20. Program to check given number is palindrome or not
+    public static boolean isPalindrome(int num){
+        int originalNum = num;
+        int reversedNum = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            reversedNum = reversedNum * 10 + digit;
+            num /= 10;
+        }
+        return originalNum == reversedNum;
+    }
+
 
 
 

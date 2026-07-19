@@ -202,8 +202,61 @@ public class practiceSet2 {
         }
         return true; // All primes in the range are present
     }
+
     // 37. Program to find union of two arrays.
+    public static int[] findUnionOfArrays(int[] arr1, int[] arr2){
+        Set<Integer> unionSet = new HashSet<>();
+        for (int num : arr1) {
+            unionSet.add(num);
+        }
+        for (int num : arr2) {
+            unionSet.add(num);
+        }
+        return unionSet.stream().mapToInt(Integer::intValue).toArray();
+    }
+
     // 38. Program to find intersection of two arrays
+    public static int[] findIntersectionOfArrays(int[] arr1, int[] arr2){
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> intersectionSet = new HashSet<>();
+        
+        for (int num : arr1) {
+            set1.add(num);
+        }
+        
+        for (int num : arr2) {
+            if (set1.contains(num)) {
+                intersectionSet.add(num);
+            }
+        }
+        
+        return intersectionSet.stream().mapToInt(Integer::intValue).toArray();
+    }
+
     // 39. Program to find the difference of two sets.
+    public static int[] findDifferenceOfSets(int[] arr1, int[] arr2){
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> differenceSet = new HashSet<>();
+        
+        for (int num : arr1) {
+            set1.add(num);
+        }
+        
+        for (int num : arr2) {
+            set1.remove(num);
+        }
+        
+        return set1.stream().mapToInt(Integer::intValue).toArray();
+    }
+
     // 40. Program to find and count duplicate elements from the array
+    public static Map<Integer, Integer> findAndCountDuplicates(int[] arr){
+        Map<Integer, Integer> countMap = new HashMap<>();
+        for (int num : arr) {
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+        }
+        // Filter out non-duplicates
+        countMap.entrySet().removeIf(entry -> entry.getValue() <= 1);
+        return countMap;
+    }
 }

@@ -80,23 +80,128 @@ public class practiceSet2 {
         }
         return count;
     }
-    
+
     // 27. Program to print primes in the array.
+    public static void printPrimesInArray(int[] arr){
+        System.out.print("Prime numbers in the array: ");
+        for (int num : arr) {
+            if (isPrime(num)) {
+                System.out.print(num + " ");
+            }
+        }
+        System.out.println();
+    }
     // 28. Program to find sum of primes in the array
+    public static int findSumOfPrimesInArray(int[] arr){
+        int sum = 0;
+        for (int num : arr) {
+            if (isPrime(num)) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
     // 29. Program to count of primes in the array
+    public static int countPrimesInArray(int[] arr){
+        int count = 0;
+        for (int num : arr) {
+            if (isPrime(num)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     // 30. Program to find sum of evens in the array
+    public static int findSumOfEvensInArray(int[] arr){
+        int sum = 0;
+        for (int num : arr) {
+            if (num % 2 == 0) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
     // 31. Program to find smallest prime in the array
+    public static int findSmallestPrimeInArray(int[] arr){
+        int smallestPrime = Integer.MAX_VALUE;
+        for (int num : arr) {
+            if (isPrime(num) && num < smallestPrime) {
+                smallestPrime = num;
+            }
+        }
+        return smallestPrime == Integer.MAX_VALUE ? -1 : smallestPrime; // Return -1 if no prime found
+    }
     // 32. Program to find largest even in the array
+    public static int findLargestEvenInArray(int[] arr){
+        int largestEven = Integer.MIN_VALUE;
+        for (int num : arr) {
+            if (num % 2 == 0 && num > largestEven) {
+                largestEven = num;
+            }
+        }
+        return largestEven == Integer.MIN_VALUE ? -1 : largestEven; // Return -1 if no even number found
+    }
     // 33. Program to find smallest odd in the array
+    public static int findSmallestOddInArray(int[] arr){
+        int smallestOdd = Integer.MAX_VALUE;
+        for (int num : arr) {
+            if (num % 2 != 0 && num < smallestOdd) {
+                smallestOdd = num;
+            }
+        }
+        return smallestOdd == Integer.MAX_VALUE ? -1 : smallestOdd; // Return -1 if no odd number found
+    }
     // 34. Program to find kth smallest even number in the array
+    public static int findKthSmallestEvenInArray(int[] arr, int k){
+        List<Integer> evens = new ArrayList<>();
+        for (int num : arr) {
+            if (num % 2 == 0) {
+                evens.add(num);
+            }
+        }
+        Collections.sort(evens);
+        return (k > 0 && k <= evens.size()) ? evens.get(k - 1) : -1; // Return -1 if k is out of bounds
+    }
+
     // 35. Program to find kth largest prime in the array
-    // 36. Program to check if the array contains all primes between smallest and
-    // largest primes of the array.
+    public static int findKthLargestPrimeInArray(int[] arr, int k){
+        List<Integer> primes = new ArrayList<>();
+        for (int num : arr) {
+            if (isPrime(num)) {
+                primes.add(num);
+            }
+        }
+        Collections.sort(primes, Collections.reverseOrder());
+        return (k > 0 && k <= primes.size()) ? primes.get(k - 1) : -1; // Return -1 if k is out of bounds
+    }
+
+    // 36. Program to check if the array contains all primes between smallest and largest primes of the array.
     // Ex: Input: a=[25,11, 12,7,19,45,13,60,17,80]
     // Output: True
     // Explanation: smallest prime: 7
     // Largest prime: 19
     // Array has all primes between 7 to 19, hence the output : True.
+    public static boolean containsAllPrimesInRange(int[] arr){
+        int smallestPrime = Integer.MAX_VALUE;
+        int largestPrime = Integer.MIN_VALUE;
+        Set<Integer> primeSet = new HashSet<>();
+        
+        for (int num : arr) {
+            if (isPrime(num)) {
+                primeSet.add(num);
+                if (num < smallestPrime) smallestPrime = num;
+                if (num > largestPrime) largestPrime = num;
+            }
+        }
+        
+        for (int i = smallestPrime; i <= largestPrime; i++) {
+            if (isPrime(i) && !primeSet.contains(i)) {
+                return false; // Missing a prime in the range
+            }
+        }
+        return true; // All primes in the range are present
+    }
     // 37. Program to find union of two arrays.
     // 38. Program to find intersection of two arrays
     // 39. Program to find the difference of two sets.
